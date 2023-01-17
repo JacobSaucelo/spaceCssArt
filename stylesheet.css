@@ -1,0 +1,102 @@
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Inter', sans-serif; */
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  overflow: hidden;
+}
+
+body h1 {
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+/* body {
+  padding: 0;
+  margin: 0;
+  background: black;
+} */
+
+.frame {
+  position: absolute;
+  height: 1000px;
+  width: 1000px;
+  /* perspective: 200px; */
+  overflow: hidden;
+  animation: warp 5s ease-in-out infinite;
+}
+
+.space {
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transform: rotateY(-80deg); */
+}
+
+.space div {
+  height: 20%;
+  width: 20%;
+  position: absolute;
+  background: url("space.webp") center center / cover no-repeat;
+}
+
+.back {
+  background-color: blue;
+  transform: rotateX(0deg) translateZ(-100px);
+}
+.top {
+  background-color: red;
+  transform: rotateX(90deg) translateZ(100px);
+}
+.bottom {
+  background-color: red;
+  transform: rotateX(-90deg) translateZ(100px);
+}
+.left {
+  background-color: red;
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.right {
+  background-color: red;
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+@keyframes warp {
+  0% {
+    perspective: 200px;
+  }
+  100% {
+    perspective: 0px;
+  }
+}
+
+.textsInfo {
+  padding: 1rem;
+  color: white;
+  font-family: "Inter", sans-serif;
+  z-index: 3;
+}
+.textsInfo p {
+  text-align: center;
+}
+
+.textsInfo h1 {
+  color: #f0db4f;
+}
